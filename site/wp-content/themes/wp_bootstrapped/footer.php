@@ -9,7 +9,7 @@
  */
 ?>
 
-	</div><!-- #main -->
+
 
 	<footer id="colophon" role="contentinfo">
 		<div id="site-generator">
@@ -19,9 +19,20 @@
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'wp_bootstrapped' ), 'WP Bootstrapped', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
 		</div>
 	</footer><!-- #colophon -->
-</div><!-- #page -->
+
+	</div><!-- #main -->
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here!!!!!!.</p>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src=""<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
 
 <?php wp_footer(); ?>
-
-</body>
+  </body>
 </html>
