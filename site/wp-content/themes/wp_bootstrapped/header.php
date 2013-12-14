@@ -68,7 +68,7 @@ wp_head(); ?>
     <div id="wrap">
 
       <!-- Fixed navbar -->
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -77,9 +77,10 @@ wp_head(); ?>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a id="site-title"a class="navbar-brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+
           </div>
-          <div class="collapse navbar-collapse">
+         <!-- <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
@@ -97,9 +98,24 @@ wp_head(); ?>
                 </ul>
               </li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>-->
+		<?php 
+			wp_nav_menu( array(
+				'menu'              => 'primary',
+				'theme_location'    => 'primary',
+				'depth'             => 2,
+				'container'         => 'div',
+				'container_class'   => 'collapse navbar-collapse',
+				'menu_class'        => 'nav navbar-nav',
+				'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+				'walker'            => new wp_bootstrap_navwalker())
+			);
+		?>
         </div>
       </div>
+      
+      
+			
 
       <!-- Begin page content -->
       <div class="container">
@@ -108,7 +124,6 @@ wp_head(); ?>
 <?php do_action( 'before' ); ?>
 	<header id="branding" role="banner">
 		<hgroup>
-			<h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 
@@ -116,7 +131,7 @@ wp_head(); ?>
 			<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'wp_bootstrapped' ); ?></h1>
 			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wp_bootstrapped' ); ?>"><?php _e( 'Skip to content', 'wp_bootstrapped' ); ?></a></div>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		
 		</nav><!-- #access -->
 	</header><!-- #branding -->
 

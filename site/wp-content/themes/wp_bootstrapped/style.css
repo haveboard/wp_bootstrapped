@@ -19,7 +19,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #primary {
 	float: left;
 	margin: 0;
-	width: 100%;
 }
 #content {
 	margin: 0;
@@ -32,7 +31,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #colophon {
 	clear: both;
 	display: block;
-	width: 100%;
 }
 
 /* Increase the size of the content area for templates without sidebars */
@@ -383,7 +381,7 @@ article.comment {
 -------------------------------------------------------------- */
 
 #colophon {
-	padding: 1em 0 0;
+	padding:0;
 }
 
 

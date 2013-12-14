@@ -22,6 +22,12 @@
  * @since WP Bootstrapped 0.1
  */
 
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');
+
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'wp_bootstrapped' ),
+) );
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
