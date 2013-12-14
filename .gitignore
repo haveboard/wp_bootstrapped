@@ -37,6 +37,7 @@
 # and "mu-plugins" directory
 # and "sunrise" directory
 # and "advanced-cache.php" 
+site/*
 site/wp-content/*
 !site/wp-content/plugins/
 !site/wp-content/themes/
