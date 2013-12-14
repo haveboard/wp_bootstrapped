@@ -40,15 +40,15 @@
 # and "mu-plugins" directory
 # and "sunrise" directory
 # and "advanced-cache.php" 
-site/wp-content/*
-!site/wp-content/plugins/
-!site/wp-content/themes/
-!site/wp-content/mu-plugins/
-!site/wp-content/sunrise/
-!site/wp-content/advanced-cache.php
-!site/wp-content/advanced-cache.php
-!site/wp-content/object-cache.php.bak
-!site/wp-content/sunrise.php
+#site/wp-content/*
+#!site/wp-content/plugins/
+#!site/wp-content/themes/
+#!site/wp-content/mu-plugins/
+#!site/wp-content/sunrise/
+#!site/wp-content/advanced-cache.php
+#!site/wp-content/advanced-cache.php
+#!site/wp-content/object-cache.php.bak
+#!site/wp-content/sunrise.php
 
 # Ignore everything in the "plugins" directory, except the plugins you
 # specify (see the commented-out examples for hints on how to do this.)
