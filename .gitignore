@@ -28,18 +28,12 @@
 # Ignore everything in the root except the "wp-content" directory.
 /*
 #.gitignore
-!site/
+!site/*
 !site/wp-content/
 !README.md
 !.htaccess
 site/wp-content/*
 !site/wp-content/plugins/
-!site/wp-content/themes/
+!site/wp-content/themes/wp_bootstrapped/
 
 
-
-
-site/wp-content/themes/twentyeleven/
-site/wp-content/themes/twentythirteen/
-wp-content/themes/twentytwelve/
-site/wp-content/themes/index.php
