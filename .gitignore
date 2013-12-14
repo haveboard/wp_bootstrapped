@@ -26,9 +26,8 @@
 # http://kernel.org/pub/software/scm/git/docs/gitignore.html
  
 # Ignore everything in the root except the "wp-content" directory.
-/*
+/site/*
 #.gitignore
-!site/*
 !site/wp-content/
 !site/wp-content/*
 !site/wp-content/plugins/
