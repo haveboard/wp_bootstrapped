@@ -50,14 +50,6 @@ site/wp-content/*
 !site/wp-content/object-cache.php.bak
 !site/wp-content/sunrise.php
 
-site/wp-content/themes/twentyeleven/
-site/wp-content/themes/twentythirteen/
-site/wp-content/themes/twentytwelve/
-site/wp-content/themes/index.php
-site/wp-content/plugins/akismet/
-site/wp-content/plugins/index.php
-
-
 # Ignore everything in the "plugins" directory, except the plugins you
 # specify (see the commented-out examples for hints on how to do this.)
 # wp-content/plugins/*
