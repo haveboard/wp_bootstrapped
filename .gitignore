@@ -29,6 +29,8 @@
 /*
 #.gitignore
 !site/wp-content/
+!site/wp-content/plugins/
+!site/wp-content/themes/
 !README.md
 !.htaccess
 
