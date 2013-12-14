@@ -16,21 +16,40 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* =Structure
 -------------------------------------------------------------- */
 
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
 #primary {
-	float: left;
 	margin: 0;
 }
 #content {
 	margin: 0;
 }
 #main .widget-area {
-	float: right;
 	overflow: hidden;
-	width: 220px;
-}
-#colophon {
-	clear: both;
-	display: block;
 }
 
 /* Increase the size of the content area for templates without sidebars */
@@ -71,7 +90,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #site-title {
 }
 #site-description {
-	font-size: 1em;
+	font-size: 70%;
 	font-weight: normal;
 	margin: 0 0 1em;
 }
@@ -81,58 +100,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 -------------------------------------------------------------- */
 
 #access {
-	background: #eee;
-	display: block;
-	float: left;
-	margin: 0 auto 1em;
-	width: 100%;
-}
-#access ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-#access li {
-	float: left;
-	position: relative;
-}
-#access a {
-	display: block;
-	line-height: 2em;
-	padding: 0 1em;
-	text-decoration: none;
-}
-#access ul ul {
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	display: none;
-	float: left;
-	position: absolute;
-	top: 2em;
-	left: 0;
-	z-index: 99999;
-}
-#access ul ul ul {
-	left: 100%;
-	top: 0;
-}
-#access ul ul a {
-	background: #dedede;
-	line-height: 1em;
-	padding: .5em .5em .5em 1em;
-	width: 10em;
-	height: auto;
-}
-#access li:hover > a,
-#access ul ul :hover > a {
-	background: #dedede;
-}
-#access ul ul a:hover {
-	background: #cecece;
-}
-#access ul li:hover > ul {
-	display: block;
 }
 
 
@@ -387,32 +354,6 @@ article.comment {
 
 
 
-
-
-/* Sticky footer styles
--------------------------------------------------- */
-
-html,
-body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
-}
-
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
-
-/* Set the fixed height of the footer here */
-#footer {
-  height: 60px;
-  background-color: #f5f5f5;
-}
 
 
 /* Custom page CSS

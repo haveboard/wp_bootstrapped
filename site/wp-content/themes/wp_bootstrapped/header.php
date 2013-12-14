@@ -64,12 +64,14 @@ wp_head(); ?>
 
 <body <?php body_class(); ?>>
 
+<?php do_action( 'before' ); ?>
     <!-- Wrap all page content here -->
     <div id="wrap">
 
       <!-- Fixed navbar -->
      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
+	<nav id="access" role="navigation">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -77,7 +79,8 @@ wp_head(); ?>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a id="site-title"a class="navbar-brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+
+            <a id="site-title" class="navbar-brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> - <span id="site-description"><?php bloginfo( 'description' ); ?></span></a>
 
           </div>
          <!-- <div class="collapse navbar-collapse">
@@ -112,6 +115,7 @@ wp_head(); ?>
 			);
 		?>
         </div>
+		</nav><!-- #access -->
       </div>
       
       
@@ -121,7 +125,6 @@ wp_head(); ?>
       <div class="container">
 
 
-<?php do_action( 'before' ); ?>
 	<header id="branding" role="banner">
 		<hgroup>
 			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>

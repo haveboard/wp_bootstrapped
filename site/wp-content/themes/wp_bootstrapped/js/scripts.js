@@ -6,9 +6,6 @@ $j(function(){
 
 $j(document).ready(function(){
    // Will be true if bootstrap is enabled, false otherwise
-var bootstrap_enabled = (typeof $().modal == 'function');
-alert (bootstrap_enabled);
-alert("js loaded");
 	/*
   
 	$j(".fillheight" ).each(function( index ) {
