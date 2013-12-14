@@ -45,8 +45,6 @@ site/wp-content/*
 !site/wp-content/themes/
 !site/wp-content/mu-plugins/
 !site/wp-content/sunrise/
-!site/wp-content/plugins/akismet/
-!site/wp-content/plugins/hello.php
 !site/wp-content/advanced-cache.php
 !site/wp-content/advanced-cache.php
 !site/wp-content/object-cache.php.bak
@@ -56,6 +54,8 @@ site/wp-content/themes/twentyeleven/
 site/wp-content/themes/twentythirteen/
 site/wp-content/themes/twentytwelve/
 site/wp-content/themes/index.php
+site/wp-content/plugins/akismet/
+site/wp-content/plugins/index.php
 
 
 # Ignore everything in the "plugins" directory, except the plugins you
