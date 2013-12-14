@@ -20,18 +20,20 @@
 		</div>
 	</footer><!-- #colophon -->
 
+	</div><!-- #main -->
+	</div><!-- .container -->
+	</div><!-- #wrap -->
     <div id="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <p class="text-muted">Place sticky footer content here.!</p>
       </div>
     </div>
 
-	</div><!-- #main -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-	<script src=""<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
+	<script src=""<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js" type="text/javascript"></script>
 
 <?php wp_footer(); ?>
   </body>
