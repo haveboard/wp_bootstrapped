@@ -29,6 +29,14 @@
 /*
 #.gitignore
 !site/
-!wp-content/
+!site/wp-content/
 !README.md
 !.htaccess
+
+
+
+
+site/wp-content/themes/twentyeleven/
+site/wp-content/themes/twentythirteen/
+wp-content/themes/twentytwelve/
+site/wp-content/themes/index.php
