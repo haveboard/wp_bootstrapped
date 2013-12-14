@@ -28,7 +28,7 @@
 # Ignore everything in the root except the "wp-content" directory.
 /*
 #.gitignore
-!wp-content/
+!site/wp-content/
 !README.md
 !.htaccess
  
@@ -37,19 +37,19 @@
 # and "mu-plugins" directory
 # and "sunrise" directory
 # and "advanced-cache.php" 
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
-!wp-content/mu-plugins/
-!wp-content/sunrise/
-!wp-content/advanced-cache.php
-!wp-content/object-cache.php.bak
-!wp-content/sunrise.php
+site/wp-content/*
+!site/wp-content/plugins/
+!site/wp-content/themes/
+!site/wp-content/mu-plugins/
+!site/wp-content/sunrise/
+!site/wp-content/advanced-cache.php
+!site/wp-content/object-cache.php.bak
+!site/wp-content/sunrise.php
 
-wp-content/themes/twentyeleven/
-wp-content/themes/twentythirteen/
-wp-content/themes/twentytwelve/
-wp-content/themes/index.php
+site/wp-content/themes/twentyeleven/
+site/wp-content/themes/twentythirteen/
+site/wp-content/themes/twentytwelve/
+site/wp-content/themes/index.php
 
 
 # Ignore everything in the "plugins" directory, except the plugins you
