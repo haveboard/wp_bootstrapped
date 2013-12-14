@@ -28,8 +28,40 @@
 # Ignore everything in the root except the "wp-content" directory.
 /*
 #.gitignore
-/site/wp-content/*
-!/site/wp-content/themes/wp_bootstrapped/
+!wp-content/
 !README.md
+!.htaccess
+
+/site/*
+!site/wp-content/
+ 
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directory
+# and "mu-plugins" directory
+# and "sunrise" directory
+# and "advanced-cache.php" 
+site/wp-content/*
+!site/wp-content/plugins/
+!site/wp-content/themes/
+!site/wp-content/mu-plugins/
+!site/wp-content/sunrise/
+!site/wp-content/advanced-cache.php
+!site/wp-content/object-cache.php.bak
+!site/wp-content/sunrise.php
+
+site/wp-content/themes/twentyeleven/
+site/wp-content/themes/twentythirteen/
+site/wp-content/themes/twentytwelve/
+site/wp-content/themes/index.php
 
 
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+# wp-content/plugins/*
+# !wp-content/plugins/my-single-file-plugin.php
+# !wp-content/plugins/my-directory-plugin/
+ 
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+# wp-content/themes/*
+# !wp-content/themes/my-theme/
