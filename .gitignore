@@ -45,6 +45,9 @@ site/wp-content/*
 !site/wp-content/themes/
 !site/wp-content/mu-plugins/
 !site/wp-content/sunrise/
+!site/wp-content/plugins/akismet/
+!site/wp-content/plugins/hello.php
+!site/wp-content/advanced-cache.php
 !site/wp-content/advanced-cache.php
 !site/wp-content/object-cache.php.bak
 !site/wp-content/sunrise.php
