@@ -68,6 +68,7 @@ wp_head(); ?>
     <!-- Wrap all page content here -->
     <div id="wrap">
 
+	<header id="branding" role="banner">
       <!-- Fixed navbar -->
      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -117,6 +118,7 @@ wp_head(); ?>
         </div>
 		</nav><!-- #access -->
       </div>
+	</header><!-- #branding -->
       
       
 			
@@ -124,18 +126,5 @@ wp_head(); ?>
       <!-- Begin page content -->
       <div class="container">
 
-
-	<header id="branding" role="banner">
-		<hgroup>
-			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
-
-		<nav id="access" role="navigation">
-			<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'wp_bootstrapped' ); ?></h1>
-			<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wp_bootstrapped' ); ?>"><?php _e( 'Skip to content', 'wp_bootstrapped' ); ?></a></div>
-
-		
-		</nav><!-- #access -->
-	</header><!-- #branding -->
 
 	<div id="main">

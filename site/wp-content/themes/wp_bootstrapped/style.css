@@ -361,7 +361,7 @@ article.comment {
 /* Not required for template or sticky footer method. */
 
 #wrap > .container {
-  padding: 60px 15px 0;
+  padding: 60px 0 0;
 }
 .container .text-muted {
   margin: 20px 0;
