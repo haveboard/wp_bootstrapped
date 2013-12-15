@@ -80,7 +80,7 @@ wp_head(); ?>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-
+            
             <a id="site-title" class="navbar-brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> - <span id="site-description"><?php bloginfo( 'description' ); ?></span></a>
 
           </div>

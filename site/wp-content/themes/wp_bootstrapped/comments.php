@@ -71,39 +71,6 @@
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'wp_bootstrapped' ); ?></p>
 	<?php endif; ?>
 
-<div id="respond">
-    <h3 id="reply-title">Leave a Reply</h3>
-    <form class="form" action="http://localhost/.../wp-comments-post.php" method="post" id="commentform">
-        <p class="comment-notes">
-            Your email address will not be published. Required fields are marked
-            <span class="required">*</span>
-        </p>
-        <p class="comment-form-author">
-            <label for="author">Name</label>
-            <span class="required">*</span>
-            <input id="author" name="author" type="text" value="John Doe" size="30" aria-required="true">
-        </p>
-        <p class="comment-form-email">
-            <label for="email">Email</label>
-            <span class="required">*</span>
-            <input id="email" name="email" type="text" value="johndoe@dodgeit.com" size="30" aria-required="true">
-        </p>
-        <p class="comment-form-url">
-            <label for="url">Website</label>
-            <input id="url" name="url" type="text" value size="30">
-        </p>
-        <p class="comment-form-comment">
-            <label for="comment">Comment</label>
-            <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
-        </p>
-        <p class="form-allowed-tags">
-            You may use these HTML tags and attributes...
-        </p>
-        <p class="form-submit">
-            <input name="submit" type="submit" id="submit" value="Post Comment">
-            <input type="hidden" name="comment_post_ID" value="22" id="comment_post_ID">
-            <input type="hidden" name="comment_parent" id="comment_parent" value="0">
-        </p>
-    </form>
-</div> <!-- #respond -->
+	<?php comment_form(); ?>
+
 </div><!-- #comments -->
