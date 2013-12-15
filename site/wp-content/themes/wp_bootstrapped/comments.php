@@ -105,13 +105,12 @@ $comments_args = array(
     __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) .
     '</p>',
 
-  'comment_notes_after' => '',
-/*  'comment_notes_after' => '<p class="form-allowed-tags">' .
+  'comment_notes_after' => '<p class="form-allowed-tags col-md-8">' .
     sprintf(
       __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes!!: %s' ),
       ' <code>' . allowed_tags() . '</code>'
     ) . '</p>',
-*/
+
   'fields' => apply_filters( 'comment_form_default_fields', array(
 
     'author' =>
