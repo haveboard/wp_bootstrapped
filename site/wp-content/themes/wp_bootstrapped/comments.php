@@ -11,7 +11,7 @@
  * @since WP Bootstrapped 0.1
  */
 ?>
-	<div id="comments">
+	<div id="comments" class="col-md-8">
 	<?php if ( post_password_required() ) : ?>
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'wp_bootstrapped' ); ?></p>
 	</div><!-- #comments -->
