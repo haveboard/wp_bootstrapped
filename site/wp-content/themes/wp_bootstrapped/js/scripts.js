@@ -5,6 +5,7 @@ $j(function(){
 						
 
 $j(document).ready(function(){
+
    // Will be true if bootstrap is enabled, false otherwise
 	/*
   
