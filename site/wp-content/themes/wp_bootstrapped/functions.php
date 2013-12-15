@@ -31,10 +31,10 @@ register_nav_menus( array(
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-if ( ! isset( $content_width ) )
+if ( ! isset( $content_width ) ){
 	$content_width = 640; /* pixels */
-
-if ( ! function_exists( 'wp_bootstrapped_setup' ) ):
+}
+if ( ! function_exists( 'wp_bootstrapped_setup' ) ){
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -76,7 +76,7 @@ function wp_bootstrapped_setup() {
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery' ) );
 }
-endif; // wp_bootstrapped_setup
+} //endif; // wp_bootstrapped_setup
 
 /**
  * Tell WordPress to run wp_bootstrapped_setup() when the 'after_setup_theme' hook is run.
@@ -126,7 +126,7 @@ function wp_bootstrapped_widgets_init() {
 }
 add_action( 'init', 'wp_bootstrapped_widgets_init' );
 
-if ( ! function_exists( 'wp_bootstrapped_content_nav' ) ):
+if ( ! function_exists( 'wp_bootstrapped_content_nav' ) ){
 /**
  * Display navigation to next/previous pages when applicable
  *
@@ -139,30 +139,30 @@ function wp_bootstrapped_content_nav( $nav_id ) {
 	<nav id="<?php echo $nav_id; ?>">
 		<h1 class="assistive-text section-heading"><?php _e( 'Post navigation', 'wp_bootstrapped' ); ?></h1>
 
-	<?php if ( is_single() ) : // navigation links for single posts ?>
+	<?php if ( is_single() ) { // navigation links for single posts ?>
 
 		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'wp_bootstrapped' ) . '</span> %title' ); ?>
 		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'wp_bootstrapped' ) . '</span>' ); ?>
 
-	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
+	<?php }elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) { // navigation links for home, archive, and search pages ?>
 
-		<?php if ( get_next_posts_link() ) : ?>
+		<?php if ( get_next_posts_link() ) { ?>
 		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'wp_bootstrapped' ) ); ?></div>
-		<?php endif; ?>
+		<?php } //endif; ?>
 
-		<?php if ( get_previous_posts_link() ) : ?>
+		<?php if ( get_previous_posts_link() ) { ?>
 		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'wp_bootstrapped' ) ); ?></div>
-		<?php endif; ?>
+		<?php } //endif; ?>
 
-	<?php endif; ?>
+	<?php } //endif; ?>
 
 	</nav><!-- #<?php echo $nav_id; ?> -->
 	<?php
 }
-endif; // wp_bootstrapped_content_nav
+} //endif; // wp_bootstrapped_content_nav
 
 
-if ( ! function_exists( 'wp_bootstrapped_comment' ) ) :
+if ( ! function_exists( 'wp_bootstrapped_comment' ) ) {
 /**
  * Template for comments and pingbacks.
  *
@@ -175,7 +175,7 @@ if ( ! function_exists( 'wp_bootstrapped_comment' ) ) :
  */
 function wp_bootstrapped_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
-	switch ( $comment->comment_type ) :
+	switch ( $comment->comment_type ) {
 		case 'pingback' :
 		case 'trackback' :
 	?>
@@ -192,10 +192,10 @@ function wp_bootstrapped_comment( $comment, $args, $depth ) {
 					<?php echo get_avatar( $comment, 40 ); ?>
 					<?php printf( __( '%s <span class="says">says:</span>', 'wp_bootstrapped' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author .vcard -->
-				<?php if ( $comment->comment_approved == '0' ) : ?>
+				<?php if ( $comment->comment_approved == '0' ){ ?>
 					<em><?php _e( 'Your comment is awaiting moderation.', 'wp_bootstrapped' ); ?></em>
 					<br />
-				<?php endif; ?>
+				<?php } //endif; ?>
 
 				<div class="comment-meta commentmetadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
@@ -217,11 +217,11 @@ function wp_bootstrapped_comment( $comment, $args, $depth ) {
 
 	<?php
 			break;
-	endswitch;
+	} //endswitch;
 }
-endif; // ends check for wp_bootstrapped_comment()
+} //endif; // ends check for wp_bootstrapped_comment()
 
-if ( ! function_exists( 'wp_bootstrapped_posted_on' ) ) :
+if ( ! function_exists( 'wp_bootstrapped_posted_on' ) ) {
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  * Create your own wp_bootstrapped_posted_on to override in a child theme
@@ -239,7 +239,7 @@ function wp_bootstrapped_posted_on() {
 		esc_html( get_the_author() )
 	);
 }
-endif;
+} //endif;
 
 /**
  * Adds custom classes to the array of body classes.

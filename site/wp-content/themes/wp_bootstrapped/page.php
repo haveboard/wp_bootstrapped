@@ -15,15 +15,30 @@ get_header(); ?>
 
 		<div id="primary" class="col-md-8">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php 
+				while ( have_posts() ) { the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<header class="entry-header">
+							<h1 class="entry-title"><?php the_title(); ?></h1>
+						</header><!-- .entry-header -->
 
-					<?php comments_template( '', true ); ?>
+						<div class="entry-content">
+							<?php
+							the_content();
+							wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'wp_bootstrapped' ), 'after' => '</div>' ) );
+							edit_post_link( __( 'Edit', 'wp_bootstrapped' ), '<span class="edit-link">', '</span>' );
+							?>
+						</div><!-- .entry-content -->
+					</article><!-- #post-<?php the_ID(); ?> -->
 
-				<?php endwhile; // end of the loop. ?>
-
+					<?php 
+					comments_template( '', true );
+					} //endwhile; // end of the loop. 
+					?>
 		</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();
+?>

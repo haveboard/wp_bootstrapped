@@ -10,13 +10,13 @@
 ?>
 
 
-	</div><!-- #main -->
-	</div><!-- .container -->
+			</div><!-- #main -->
+		</div><!-- .container -->
 	</div><!-- #wrap -->
     <div id="footer">
       <div class="container">
 		<footer id="colophon" role="contentinfo">
-			<p class="text-muted">Place sticky footer content here.!</p>
+			<p class="text-muted">Place sticky footer content here.</p>
 		</footer><!-- #colophon -->
       </div>
     </div>

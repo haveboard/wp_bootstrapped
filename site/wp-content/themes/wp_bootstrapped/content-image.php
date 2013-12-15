@@ -24,7 +24,7 @@
 		<?php if ( comments_open() || ( '0' != get_comments_number() && ! comments_open() ) ) : ?>
 		<span class="sep"> | </span>
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'wp_bootstrapped' ), __( '1 Comment', 'wp_bootstrapped' ), __( '% Comments', 'wp_bootstrapped' ) ); ?></span>
-		<?php endif; ?>
+		<?php } //endif; ?>
 		<?php edit_post_link( __( 'Edit', 'wp_bootstrapped' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
 	</footer><!-- #entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

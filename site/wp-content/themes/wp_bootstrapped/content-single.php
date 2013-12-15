@@ -14,8 +14,10 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'wp_bootstrapped' ), 'after' => '</div>' ) ); ?>
+		<?php 
+		the_content();
+		wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'wp_bootstrapped' ), 'after' => '</div>' ) );
+		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
@@ -51,8 +53,7 @@
 				get_permalink(),
 				the_title_attribute( 'echo=0' )
 			);
-		?>
-
-		<?php edit_post_link( __( 'Edit', 'wp_bootstrapped' ), '<span class="edit-link">', '</span>' ); ?>
+		
+		edit_post_link( __( 'Edit', 'wp_bootstrapped' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

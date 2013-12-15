@@ -72,7 +72,7 @@ wp_head(); ?>
       <!-- Fixed navbar -->
      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-	<nav id="access" role="navigation">
+		<nav id="access" role="navigation">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -115,9 +115,9 @@ wp_head(); ?>
 				'walker'            => new wp_bootstrap_navwalker())
 			);
 		?>
-        </div>
 		</nav><!-- #access -->
       </div>
+	  </div>
 	</header><!-- #branding -->
       
       
@@ -125,6 +125,4 @@ wp_head(); ?>
 
       <!-- Begin page content -->
       <div class="container">
-
-
-	<div id="main">
+		<div id="main">

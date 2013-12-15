@@ -8,15 +8,13 @@
 
 get_header(); ?>
 
-		<div id="primary" class="image-attachment">
-			<div id="content" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
+		<div id="primary" class="col-md-8 image-attachment">
+			<?php 
+			while ( have_posts() ) { the_post();
+			?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-
 						<div class="entry-meta">
 							<?php
 								$metadata = wp_get_attachment_metadata();
@@ -29,8 +27,8 @@ get_header(); ?>
 									get_permalink( $post->post_parent ),
 									get_the_title( $post->post_parent )
 								);
-							?>
-							<?php edit_post_link( __( 'Edit', 'wp_bootstrapped' ), '<span class="sep">|</span> <span class="edit-link">', '</span>' ); ?>
+							
+							edit_post_link( __( 'Edit', 'wp_bootstrapped' ), '<span class="sep">|</span> <span class="edit-link">', '</span>' ); ?>
 						</div><!-- .entry-meta -->
 
 						<nav id="image-navigation">
@@ -78,7 +76,7 @@ get_header(); ?>
 							<div class="entry-caption">
 								<?php the_excerpt(); ?>
 							</div>
-							<?php endif; ?>
+							<?php } //endif; ?>
 						</div><!-- .entry-attachment -->
 
 						<?php the_content(); ?>
@@ -87,24 +85,24 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 
 					<footer class="entry-meta">
-						<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-							<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'wp_bootstrapped' ), get_trackback_url() ); ?>
-						<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
-							<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'wp_bootstrapped' ), get_trackback_url() ); ?>
-						<?php elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
-							<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'wp_bootstrapped' ); ?>
-						<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
-							<?php _e( 'Both comments and trackbacks are currently closed.', 'wp_bootstrapped' ); ?>
-						<?php endif; ?>
-						<?php edit_post_link( __( 'Edit', 'wp_bootstrapped' ), ' <span class="edit-link">', '</span>' ); ?>
+						<?php
+						if ( comments_open() && pings_open() ) { // Comments and trackbacks open
+							printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'wp_bootstrapped' ), get_trackback_url() );
+						} elseif ( ! comments_open() && pings_open() ) { // Only trackbacks open 
+							printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'wp_bootstrapped' ), get_trackback_url() ); 
+						} elseif ( comments_open() && ! pings_open() ) { // Only comments open 
+							_e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'wp_bootstrapped' ); 
+						} elseif ( ! comments_open() && ! pings_open() ) { // Comments and trackbacks closed 
+							_e( 'Both comments and trackbacks are currently closed.', 'wp_bootstrapped' ); 
+						} //endif; 
+						edit_post_link( __( 'Edit', 'wp_bootstrapped' ), ' <span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-meta -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
-				<?php comments_template(); ?>
+				<?php comments_template();
+				} //endwhile; // end of the loop. 
+				?>
 
-			<?php endwhile; // end of the loop. ?>
-
-			</div><!-- #content -->
 		</div><!-- #primary -->
 
 <?php get_footer(); ?>

@@ -11,7 +11,7 @@ get_header(); ?>
 		<section id="primary">
 			<div id="content" role="main">
 
-			<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) { ?>
 
 				<?php
 					/* Queue the first post, that way we know
@@ -38,7 +38,7 @@ get_header(); ?>
 				<?php wp_bootstrapped_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( have_posts() ) { the_post(); ?>
 
 					<?php
 						/* Include the Post-Format-specific template for the content.
@@ -48,11 +48,11 @@ get_header(); ?>
 						get_template_part( 'content', get_post_format() );
 					?>
 
-				<?php endwhile; ?>
+				<?php } //endwhile; ?>
 
 				<?php wp_bootstrapped_content_nav( 'nav-below' ); ?>
 
-			<?php else : ?>
+			<?php } else { ?>
 
 				<article id="post-0" class="post no-results not-found">
 					<header class="entry-header">
@@ -65,10 +65,12 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
 
-			<?php endif; ?>
+			<?php } //endif; ?>
 
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();
+?>

@@ -8,7 +8,7 @@
 ?>
 		<div id="secondary" class="col-md-4" class="widget-area" role="complementary">
 			<?php do_action( 'before_sidebar' ); ?>
-			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ){ ?>
 
 				<aside id="search" class="widget widget_search">
 					<?php get_search_form(); ?>
@@ -30,7 +30,7 @@
 					</ul>
 				</aside>
 
-			<?php endif; // end sidebar widget area ?>
+			<?php } //endif; // end sidebar widget area ?>
 		</div><!-- #secondary .widget-area -->
 
 		<?php
@@ -39,6 +39,6 @@
 		<div id="tertiary" class="widget-area" role="complementary">
 			<?php dynamic_sidebar( 'sidebar-2' ); ?>
 		</div><!-- #tertiary .widget-area -->
-		<?php endif; 
+		<?php } //endif; 
 		*/
 		?>
