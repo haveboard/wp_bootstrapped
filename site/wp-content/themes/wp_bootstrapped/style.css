@@ -23,9 +23,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 html,
 body {
   height: 100%;
+  background:#ccc;
   /* The html and body elements cannot have any padding or margin. */
 }
 
+.container
+{
+	background:#fff;
+}
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;
@@ -371,4 +376,5 @@ article.comment {
 
 code {
   font-size: 80%;
+  white-space: normal;
 }
